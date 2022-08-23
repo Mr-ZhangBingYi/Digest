@@ -74,6 +74,7 @@
 		padding: 20rpx;
 		font-weight: 900;
 		font-size: 50rpx;
+		margin-top: 50rpx;
 	}
 	.top{
 		text-align: center;
