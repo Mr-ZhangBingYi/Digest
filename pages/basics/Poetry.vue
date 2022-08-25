@@ -11,7 +11,7 @@
 			</view>
 		</scroll-view>
 		<block v-if="TabCur==0">
-			<!-- 理财 -->
+			<!-- 绝句-->
 			<view class="book">
 				<view class="books" v-for="item in conduct" :key="item.conduct" >
 				           <navigator :url="item.url">
@@ -21,7 +21,7 @@
 			</view>
 		</block>
 		<block v-if="TabCur==1">
-			<!-- 宏观 -->
+			<!-- 现代-->
 			<view class="book">
 				<view class="books" v-for="item in macroscopic" :key="item.macroscopic" >
 				           <navigator :url="item.url">
@@ -44,7 +44,7 @@
 				tabNav: ['绝句', '现代', ],
 				conduct: [{
 					name: '清平调',
-					url:''
+					url:'.//pages/basics/poetry/QingpingTune'
 				},{
 					name: "咏菊",
 					url: ''

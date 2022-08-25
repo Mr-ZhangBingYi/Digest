@@ -25,11 +25,18 @@
 						color: 'purple',
 						cuIcon: 'vipcard'
 					},
+				
 					// {
 					// 	title: '导航栏 ',
 					// 	name: 'nav',
 					// 	color: 'mauve',
 					// 	cuIcon: 'formfill'
+					// },
+					// {
+					// 	title: '民谣',
+					// 	name: 'Pushu',
+					// 	color: 'orange',
+					// 	cuIcon: 'timefill'
 					// },
 					// {
 					// 	title: '列表',
@@ -49,12 +56,7 @@
 					// 	color: 'red',
 					// 	cuIcon: 'formfill'
 					// },
-					// {
-					// 	title: '时间轴',
-					// 	name: 'timeline',
-					// 	color: 'orange',
-					// 	cuIcon: 'timefill'
-					// },
+					
 					// {
 					// 	title: '聊天',
 					// 	name: 'chat',

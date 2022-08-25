@@ -107,11 +107,17 @@
 			"style": {}
 		},
 		// 页面注册
+		// 价值
 		{
 			"path": "pages/basics/note/value",
 			"style": {}
 		},{
 			"path": "pages/basics/note/rich",
+			"style": {}
+		},
+		// 诗词 清平调
+		{
+			"path": "pages/basics/poetry/QingpingTune",
 			"style": {}
 		}
 	],
