@@ -11,13 +11,11 @@
 					<li v-for="(a,b) in avatar" :key="a.chapter">{{a.chapter}}
 						<ol>
 
-							<li v-for="(e,f) in a.text" :key="e.words">{{e.words}}</li>
+							<li v-for="(e,f) in a. text" :key="e. text">{{e. words}}</li>
 						</ol>
 					</li>
 
 				</ul>
-
-
 			</view>
 		</view>
 	</view>

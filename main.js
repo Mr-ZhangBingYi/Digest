@@ -14,6 +14,10 @@ import cuCustom from './colorui/components/cu-custom.vue'
 Vue.component('cu-custom',cuCustom)
 
 Vue.config.productionTip = false
+// 引入jquery
+import $ from 'jquery'
+window.jQuery = $
+window.$ = $
 
 App.mpType = 'app'
 

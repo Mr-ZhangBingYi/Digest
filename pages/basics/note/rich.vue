@@ -9,7 +9,7 @@
 
 
 				<ol>
-					<li v-for="item in avatar" key="item.avatar">{{item}}</li>
+					<li v-for="item in avatar" :key="item.avatar">{{item}}</li>
 				</ol>
 			</view>
 		</view>
