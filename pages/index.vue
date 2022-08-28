@@ -16,7 +16,7 @@
 			</view>
 			<view class="zhiling">
 				<view class="anhao">
-					<image src="../static/security.svg" mode="" ></image>
+					<image src="../static/security.svg" mode=""></image>
 				</view>
 				<input type="password" :placeholder="input.placeholder" v-model="input.value" />
 				<view class="button">
@@ -45,7 +45,7 @@
 		methods: {
 			goIndex() {
 				let a = this.input.value;
-				let b = 9090;
+				let b = 9527;
 				// 不能0开头
 				if (a == b) {
 					uni.navigateTo({
@@ -53,14 +53,14 @@
 					});
 				} else {
 					this.Tips = true,
-				    this.input = '',
-					// 立即刷新页面
-					// location.reload();
-					
-					// 延迟刷新
-					window.setTimeout(function () {
-					     window.location.reload();
-					},2000)
+						this.input = '',
+						// 立即刷新页面
+						// location.reload();
+
+						// 延迟刷新
+						window.setTimeout(function() {
+							window.location.reload();
+						}, 2000)
 				};
 				this.input = ''
 			}
@@ -80,7 +80,7 @@
 	image {
 		width: 90rpx;
 		height: 70rpx;
-		margin-right: 20rpx	;
+		margin-right: 20rpx;
 	}
 
 	input {
