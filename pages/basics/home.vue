@@ -2,10 +2,11 @@
 	<view>
 		<scroll-view scroll-y class="page">
 			<image src="https://img1.baidu.com/it/u=740255150,832214479&fm=253&fmt=auto&app=138&f=JPEG?w=771&h=500"
-			 mode="widthFix" class="response"></image>
+				mode="widthFix" class="response"></image>
 			<view class="nav-list">
-				<navigator hover-class="none" :url="'/pages/basics/' + item.name" class="nav-li" navigateTo :class="'bg-'+item.color"
-				 :style="[{animation: 'show ' + ((index+1)*0.2+1) + 's 1'}]" v-for="(item,index) in elements" :key="index">
+				<navigator hover-class="none" :url="'/pages/basics/' + item.name" class="nav-li" navigateTo
+					:class="'bg-'+item.color" :style="[{animation: 'show ' + ((index+1)*0.2+1) + 's 1'}]"
+					v-for="(item,index) in elements" :key="index">
 					<view class="nav-title">{{item.title}}</view>
 					<view class="nav-name">{{item.name}}</view>
 					<text :class="'cuIcon-' + item.cuIcon"></text>
@@ -51,13 +52,13 @@
 						color: 'mauve',
 						cuIcon: 'cuIcon'
 					},
-					// {
-					// 	title: '文本',
-					// 	name: 'text',
-					// 	color: 'purple',
-					// 	cuIcon: 'font'
-					// },
-					
+					{
+						title: '小说',
+						name: 'novel',
+						color: 'purple',
+						cuIcon: 'font'
+					},
+
 					// {
 					// 	title: '按钮',
 					// 	name: 'button',
@@ -76,14 +77,14 @@
 					// 	color: 'red',
 					// 	cuIcon: 'myfill'
 					// },
-					
+
 					// {
 					// 	title: '边框阴影',
 					// 	name: 'shadow',
 					// 	color: 'olive',
 					// 	cuIcon: 'copy'
 					// },
-					
+
 				],
 			};
 		},
