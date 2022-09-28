@@ -20,7 +20,7 @@
 				<view class='cuIcon-cu-image'>
 					<image :src="'/static/tabbar/plugin' + [PageCur == 'plugin'?'_cur':''] + '.png'"></image>
 				</view>
-				<view :class="PageCur=='plugin'?'text-green':'text-gray'">扩展</view>
+				<view :class="PageCur=='plugin'?'text-green':'text-gray'">Booklist</view>
 			</view>
 		</view>
 	</view>
@@ -42,5 +42,5 @@
 </script>
 
 <style>
-	
+
 </style>

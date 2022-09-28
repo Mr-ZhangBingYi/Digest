@@ -1,29 +1,61 @@
 <template name="components">
 	<view>
-		<view class="top_one">
-			持续建设中
+
+		<view>
+			<img src="https://img2.baidu.com/it/u=2532418673,3876881769&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500"
+				alt="" class="background">
 		</view>
-<view class="top">
-	
- 欢迎指出不足指出，期待您的建议!
-</view>
-		<scroll-view scroll-y class="page">
-			<!-- <cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg"> -->
-			
-			<block slot="content">
-				<!-- <image src="/static/cjkz.png" mode="aspectFill" style="width: 240upx;height: 60upx;"></image> -->
-			</block>
-			</cu-custom>
-			<view class="cu-card">
-				<view class="cu-item bg-img shadow-blur" :style="[{backgroundImage:'url('+item.img+')'}]" @tap="toChild"
-					:data-url="item.url" v-for="(item,index) in list" :key="index">
-					<view class="cardTitle">
-						{{item.title}}
-					</view>
+		<view class="books">
+			书单 ：
+		</view>
+		<view class="list">
+			<view class="Read" @click="a">
+				<view class="Read">
+					已读
 				</view>
+				<image src="../../static/listicon.svg" mode="" class="aaa"></image>
 			</view>
-			<view class="cu-tabbar-height"></view>
-		</scroll-view>
+			<view class="A_list" v-if="show">
+				<ul>
+					<li>123</li>
+					<li>234</li>
+					<li>123</li>
+					<li>234</li>
+					<li>123</li>
+					<li>234</li>
+					<li>123</li>
+					<li>234</li>
+					<li>123</li>
+					<li>234</li>
+					<li>123</li>
+					<li>234</li>
+				</ul>
+			</view>
+			<view class="Unread" @click="b">
+				<view class="Unread">
+					未读
+				</view>
+
+				<image src="../../static/listicon.svg" mode="" class="aaa"></image>
+
+			</view>
+			<view class="B_list" v-if="shwo">
+				<ul>
+					<li>123</li>
+					<li>234</li>
+					<li>123</li>
+					<li>234</li>
+					<li>123</li>
+					<li>234</li>
+					<li>123</li>
+					<li>234</li>
+					<li>123</li>
+					<li>234</li>
+					<li>123</li>
+					<li>234</li>
+				</ul>
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -32,6 +64,8 @@
 		name: "components",
 		data() {
 			return {
+				show: false,
+				shwo: false,
 				StatusBar: this.StatusBar,
 				CustomBar: this.CustomBar,
 				list: [
@@ -63,26 +97,87 @@
 				uni.navigateTo({
 					url: e.currentTarget.dataset.url
 				})
+
 			},
+			a() {
+				this.show = !this.show;
+				this.shwo = false
+			},
+			b() {
+				this.shwo = !this.shwo;
+				this.show = false
+			}
 		},
 	}
 </script>
 
 <style>
-	.top_one{
+	.B_list {
+		height: 500rpx !important;
+		width: 100%;
+		overflow-y: auto;
+	}
+
+	.A_list {
+		height: 500rpx !important;
+		width: 100%;
+		overflow-y: auto;
+	}
+
+	.aaa {
+		display: inline-block;
+		width: 50rpx;
+		height: 50rpx;
+		text-align: right;
+		margin-left: 470rpx;
+		margin-top: 20rpx;
+		line-height: 100rpx;
+	}
+
+	.books {
+		margin-left: 25px;
+		font-size: 60rpx;
+		font-weight: 700;
+	}
+
+	.list>view {
+		display: flex;
+		background-color: aliceblue;
+		margin-top: 20rpx;
+		border: 1px solid balck;
+		width: 90%;
+		padding: 10rpx;
+		border-radius: 10rpx;
+		height: 100rpx;
+		line-height: 100rpx;
+		padding-left: 30rpx;
+	}
+
+	.list {
+		margin-left: 50rpx;
+	}
+
+	.background {
+		width: 100%;
+		height: 45%;
+	}
+
+	.top_one {
 		text-align: center;
 		padding: 20rpx;
 		font-weight: 900;
 		font-size: 50rpx;
 		margin-top: 50rpx;
 	}
-	.top{
+
+	.top {
 		text-align: center;
 		padding: 20rpx;
 		font-weight: 900;
 		font-size: 35rpx;
 		font-family: "仿宋";
 	}
+
 	.page {
 		height: 100vh;
 	}
