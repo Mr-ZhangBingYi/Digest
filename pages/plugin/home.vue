@@ -113,15 +113,18 @@
 
 <style>
 	.B_list {
-		height: 500rpx !important;
-		width: 100%;
+		height: 570rpx !important;
 		overflow-y: auto;
+		border: 1rpx solid gray !important;
+		background-color: white !important;
 	}
 
 	.A_list {
-		height: 500rpx !important;
+		height: 570rpx !important;
 		width: 100%;
 		overflow-y: auto;
+		border: 1rpx solid gray !important;
+		background-color: white !important;
 	}
 
 	.aaa {
@@ -151,6 +154,7 @@
 		height: 100rpx;
 		line-height: 100rpx;
 		padding-left: 30rpx;
+		border: 1px solid blue;
 	}
 
 	.list {
