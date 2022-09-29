@@ -10,13 +10,15 @@
 				<ul>
 					<li v-for="(a,b) in avatar" :key="b">{{a.chapter}}
 						<br />
-						<p>{{a.time}}</p>
+
 
 						<ol>
 
 							<li v-for="(e,f) in a. text" :key="f">{{e. words}}</li>
 						</ol>
+						<p>{{a.time}}</p>
 					</li>
+
 					</li>
 				</ul>
 			</view>
@@ -126,17 +128,9 @@
 								words: '人尚未奔跑，时代却已策马扬鞭'
 							},
 							{
-								words: ''
+								words: '...'
 							},
-							{
-								words: ''
-							},
-							{
-								words: ''
-							},
-							{
-								words: ''
-							},
+
 						]
 					}
 
@@ -148,33 +142,5 @@
 </script>
 
 <style scoped>
-	/* 指定元素选择器 */
-	p {
-		color: red;
-		margin-top: 20rpx;
-	}
-
-	.Digest {
-		background-color: bisque;
-		margin: 0;
-		padding: 0;
-		top: 85rpx;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		position: fixed;
-		/* 滚动条 */
-		overflow-y: scroll;
-	}
-
-	ol>li {
-
-		margin: 20rpx 0rpx;
-		margin-left: -80rpx;
-		padding: 0 30rpx 0 30rpx;
-	}
-
-	ul>li {
-		margin-top: 35rpx;
-	}
+	@import url("../../../static/Css/abstract.css");
 </style>

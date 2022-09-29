@@ -13,24 +13,24 @@
 		<block v-if="TabCur==0">
 			<!-- 理财 -->
 			<view class="book">
-				<view class="books" v-for="item in conduct" :key="item.conduct" >
-				           <navigator :url="item.url">
+				<view class="books" v-for="item in conduct" :key="item.conduct">
+					<navigator :url="item.url">
 						{{item.name}}
-				</navigator>
+					</navigator>
 				</view>
 			</view>
 		</block>
 		<block v-if="TabCur==1">
 			<!-- 宏观 -->
 			<view class="book">
-				<view class="books" v-for="item in macroscopic" :key="item.macroscopic" >
-				           <navigator :url="item.url">
+				<view class="books" v-for="item in macroscopic" :key="item.macroscopic">
+					<navigator :url="item.url">
 						{{item.name}}
-				</navigator>
+					</navigator>
 				</view>
 			</view>
 		</block>
-	
+
 	</view>
 </template>
 
@@ -43,43 +43,43 @@
 				// avatar:['https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg','https://ossweb-img.qq.com/images/lol/web201310/skin/big81005.jpg','https://ossweb-img.qq.com/images/lol/web201310/skin/big25002.jpg','https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'],
 				tabNav: ['素问', '灵枢', ],
 				conduct: [{
-					name: '黄帝内经',
-					url:''
-				},{
-					name: "本草纲目",
-					url: ''
-				},
-				{
-					name: "",
-					url: ''
-				},
-				{
-					name: '',
-					url:''
-				},{
-					name: "",
-					url: ''
-				},],
-				macroscopic:[
+						name: '黄帝内经',
+						url: './/pages/basics/Medical _Science/HuangDi'
+					}, {
+						name: "本草纲目",
+						url: ''
+					},
 					{
-						name: '',
-						url:''
+						name: "",
+						url: ''
 					},
 					{
 						name: '',
-						url:''
-					},{
-						name: "",
 						url: ''
-					},{
-						name: "",
-						url: ''
-					},{
+					}, {
 						name: "",
 						url: ''
 					},
 				],
-				
+				macroscopic: [{
+						name: '',
+						url: ''
+					},
+					{
+						name: '',
+						url: ''
+					}, {
+						name: "",
+						url: ''
+					}, {
+						name: "",
+						url: ''
+					}, {
+						name: "",
+						url: ''
+					},
+				],
+
 			};
 		},
 		methods: {
@@ -101,11 +101,12 @@
 		text-align: center;
 		line-height: 250rpx;
 	}
+
 	.book {
 		margin-top: 50rpx;
 		display: flex;
 		/* 自动换行 */
-		 flex-wrap: wrap; 
+		flex-wrap: wrap;
 		/* border: 1px solid black; */
 	}
 

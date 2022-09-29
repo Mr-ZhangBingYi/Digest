@@ -94,6 +94,14 @@
 						author: '高至豪',
 						poster: 'https://img2.baidu.com/it/u=849630156,841345231&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=401',
 						txt: '您目前的设备不支持音频播放',
+					}, {
+						src: '../../static/muisc/炳灵.mp3',
+						controls: true,
+						loop: true,
+						name: '炳灵',
+						author: '关大洲',
+						poster: 'https://img0.baidu.com/it/u=2092023985,3250666235&fm=253&fmt=auto&app=138&f=JPEG?w=499&h=331',
+						txt: '您目前的设备不支持音频播放',
 					},
 				]
 			};

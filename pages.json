@@ -123,6 +123,11 @@
 		{
 			"path": "pages/basics/novel/RegimentalCommander",
 			"style": {}
+		},
+		// 医药 黄帝内经
+		{
+			"path": "pages/basics/Medical _Science/HuangDi",
+			"style": {}
 		}
 	],
 	"globalStyle": {
