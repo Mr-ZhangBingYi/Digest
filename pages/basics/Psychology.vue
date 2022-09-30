@@ -11,90 +11,47 @@
 			</view>
 		</scroll-view>
 		<block v-if="TabCur==0">
-			<!-- 理财 -->
 			<view class="book">
-				<view class="books" v-for="item in conduct" :key="item.conduct" >
-				           <navigator :url="item.url">
+				<view class="books" v-for="item in B_conduct" :key="item.B_conduct">
+					<navigator :url="item.url">
 						{{item.name}}
-				</navigator>
+					</navigator>
 				</view>
 			</view>
 		</block>
 		<block v-if="TabCur==1">
-			<!-- 宏观 -->
 			<view class="book">
-				<view class="books" v-for="item in macroscopic" :key="item.macroscopic" >
-				           <navigator :url="item.url">
+				<view class="books" v-for="item in B_macroscopic" :key="item.B_macroscopic">
+					<navigator :url="item.url">
 						{{item.name}}
-				</navigator>
+					</navigator>
 				</view>
 			</view>
 		</block>
 		<block v-if="TabCur==2">
-			<!-- 经典 -->
+
 			<view class="book">
-				<view class="books" v-for="item in classic" :key="item.classic" >
-				           <navigator :url="item.url">
+				<view class="books" v-for="item in B_classic" :key="item.B_classic">
+					<navigator :url="item.url">
 						{{item.name}}
-				</navigator>
+					</navigator>
 				</view>
 			</view>
 		</block>
 	</view>
 </template>
-
 <script>
+	import database from "@/static/Database/database.js"
 	export default {
 		data() {
 			return {
+				B_conduct: database.B_conduct,
+				B_macroscopic: database.B_macroscopic,
+				B_classic: database.B_classic,
 				CustomBar: this.CustomBar,
 				TabCur: 0,
 				// avatar:['https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg','https://ossweb-img.qq.com/images/lol/web201310/skin/big81005.jpg','https://ossweb-img.qq.com/images/lol/web201310/skin/big25002.jpg','https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'],
 				tabNav: ['概论', '小说', '典籍'],
-				conduct: [{
-					name: '心理咨询师手册',
-					url:''
-				},{
-					name: "",
-					url: ''
-				},
-				{
-					name: '',
-					url:''
-				},{
-					name: "",
-					url: ''
-				},],
-				macroscopic:[
-					{
-						name: '催眠师手记',
-						url:''
-					},
-					{
-						name: '',
-						url:''
-					},{
-						name: "",
-						url: ''
-					},
-				],
-				classic:[
-					{
-						name: '',
-						url:''
-					},
-					{
-						name: '',
-						url:''
-					},
-					{
-						name: '',
-						url:''
-					},{
-						name: "",
-						url: ''
-					},
-				]
 			};
 		},
 		methods: {
@@ -106,30 +63,6 @@
 	}
 </script>
 
-<style>
-	.books {
-		width: 28%;
-		height: 250rpx;
-		margin: 30rpx 2.5%;
-		padding: 0 20rpx;
-		background-color: antiquewhite;
-		text-align: center;
-		line-height: 250rpx;
-	}
-	.book {
-		margin-top: 50rpx;
-		display: flex;
-		/* 自动换行 */
-		 flex-wrap: wrap; 
-		/* border: 1px solid black; */
-	}
-
-	.cu-item {
-		width: 30%;
-		text-align: center;
-	}
-
-	page {
-		padding-top: 45rpx;
-	}
+<style scoped>
+	@import url("./../../static/Css/list.css");
 </style>

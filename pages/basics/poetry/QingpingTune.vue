@@ -20,26 +20,38 @@
 		</view>
 	</view>
 </template>
+<script>
+	export default {
+		data() {
+			return {
 
+			}
+		}
+	}
+</script>
 
 <style scoped>
-	.text{
+	.text {
 		text-align: center;
 		font-size: 33rpx;
-	    line-height: 70rpx;
+		line-height: 70rpx;
 	}
-	.name{
+
+	.name {
 		text-align: right;
 		padding-right: 30%;
 		padding-bottom: 5%;
 		font-family: "仿宋";
 		font-size: 30rpx;
 	}
-	.title{
-		text-align: center;padding: 5%;
+
+	.title {
+		text-align: center;
+		padding: 5%;
 		font-size: 35rpx;
 		font-weight: 900;
 	}
+
 	.Digest {
 		background-color: bisque;
 		margin: 0;
@@ -52,6 +64,4 @@
 		/* 滚动条 */
 		overflow-y: scroll;
 	}
-
-	
 </style>

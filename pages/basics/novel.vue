@@ -2,7 +2,7 @@
 	<view>
 		<cu-custom bgColor="bg-gradual-blue" :isBack="true">
 			<block slot="backText">返回</block>
-			<block slot="content">小说</block>
+			<block slot="content">文学著作</block>
 		</cu-custom>
 		<scroll-view scroll-x class="bg-white nav text-center fixed" :style="[{top:CustomBar + 'px'}]">
 			<view class="cu-item" :class="index==TabCur?'text-blue cur':''" v-for="(item,index) in tabNav" :key="index"
@@ -11,9 +11,9 @@
 			</view>
 		</scroll-view>
 		<block v-if="TabCur==0">
-			<!-- 理财 -->
+
 			<view class="book">
-				<view class="books" v-for="item in conduct" :key="item.conduct">
+				<view class="books" v-for="item in F_conduct" :key="item.F_conduct">
 					<navigator :url="item.url">
 						{{item.name}}
 					</navigator>
@@ -21,9 +21,9 @@
 			</view>
 		</block>
 		<block v-if="TabCur==1">
-			<!-- 宏观 -->
+
 			<view class="book">
-				<view class="books" v-for="item in macroscopic" :key="item.macroscopic">
+				<view class="books" v-for="item in F_macroscopic" :key="item.F_macroscopic">
 					<navigator :url="item.url">
 						{{item.name}}
 					</navigator>
@@ -31,9 +31,9 @@
 			</view>
 		</block>
 		<block v-if="TabCur==2">
-			<!-- 经典 -->
+
 			<view class="book">
-				<view class="books" v-for="item in classic" :key="item.classic">
+				<view class="books" v-for="item in F_classic" :key="item.F_classic">
 					<navigator :url="item.url">
 						{{item.name}}
 					</navigator>
@@ -44,63 +44,18 @@
 </template>
 
 <script>
+	import database from "@/static/Database/database.js";
 	export default {
 		data() {
 			return {
+				F_conduct: database.F_conduct,
+				F_macroscopic: database.F_macroscopic,
+				F_classic: database.F_classic,
 				CustomBar: this.CustomBar,
 				TabCur: 0,
 				// avatar:['https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg','https://ossweb-img.qq.com/images/lol/web201310/skin/big81005.jpg','https://ossweb-img.qq.com/images/lol/web201310/skin/big25002.jpg','https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'],
-				tabNav: ['文学', '故事', '哲理'],
-				conduct: [{
-						name: '平凡的世界',
-						url: ''
-					}, {
-						name: "",
-						url: ''
-					},
-					{
-						name: '',
-						url: ''
-					}, {
-						name: "",
-						url: ''
-					},
-				],
-				macroscopic: [{
-						name: '团长',
-						url: './/pages/basics/novel/RegimentalCommander'
-					},
-					{
-						name: '士兵突击',
-						url: ''
-					}, {
-						name: "",
-						url: ''
-					},
-				],
-				classic: [{
-						name: '遥远的救世主',
-						url: ''
-					},
-					{
-						name: '天幕红尘',
-						url: ''
-					},
-					{
-						name: '沧浪之水',
-						url: ''
-					}, {
-						name: "青瓷",
-						url: ''
-					}, {
-						name: "大明王朝1566",
-						url: ''
-					},
-					{
-						name: "	",
-						url: ''
-					},
-				]
+				tabNav: ['经典', '小说', '哲理'],
+
 			};
 		},
 		methods: {
@@ -112,31 +67,6 @@
 	}
 </script>
 
-<style>
-	.books {
-		width: 28%;
-		height: 250rpx;
-		margin: 30rpx 2.5%;
-		padding: 0 20rpx;
-		background-color: antiquewhite;
-		text-align: center;
-		line-height: 250rpx;
-	}
-
-	.book {
-		margin-top: 50rpx;
-		display: flex;
-		/* 自动换行 */
-		flex-wrap: wrap;
-		/* border: 1px solid black; */
-	}
-
-	.cu-item {
-		width: 30%;
-		text-align: center;
-	}
-
-	page {
-		padding-top: 45rpx;
-	}
+<style scoped>
+	@import url("./../../static/Css/list.css");
 </style>

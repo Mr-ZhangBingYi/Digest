@@ -5,15 +5,15 @@
 			<block slot="content">医学</block>
 		</cu-custom>
 		<scroll-view scroll-x class="bg-white nav text-center fixed" :style="[{top:CustomBar + 'px'}]">
-			<view class="cu-item" :class="index==TabCur?'text-blue cur':''" v-for="(item,index) in tabNav" :key="index"
-				@tap="tabSelect" :data-id="index">
+			<view class="cu-item   titlename" :class="index==TabCur?'text-blue cur':''" v-for="(item,index) in tabNav"
+				:key="index" @tap="tabSelect" :data-id="index">
 				{{tabNav[index]}}
 			</view>
 		</scroll-view>
 		<block v-if="TabCur==0">
-			<!-- 理财 -->
+
 			<view class="book">
-				<view class="books" v-for="item in conduct" :key="item.conduct">
+				<view class="books" v-for="item in C_conduct" :key="item.C_conduct">
 					<navigator :url="item.url">
 						{{item.name}}
 					</navigator>
@@ -21,9 +21,9 @@
 			</view>
 		</block>
 		<block v-if="TabCur==1">
-			<!-- 宏观 -->
+
 			<view class="book">
-				<view class="books" v-for="item in macroscopic" :key="item.macroscopic">
+				<view class="books" v-for="item in C_macroscopic" :key="item.C_macroscopic">
 					<navigator :url="item.url">
 						{{item.name}}
 					</navigator>
@@ -35,50 +35,17 @@
 </template>
 
 <script>
+	import database from "@/static/Database/database.js";
 	export default {
 		data() {
 			return {
+				C_macroscopic: database.C_macroscopic,
+				C_conduct: database.C_conduct,
 				CustomBar: this.CustomBar,
 				TabCur: 0,
 				// avatar:['https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg','https://ossweb-img.qq.com/images/lol/web201310/skin/big81005.jpg','https://ossweb-img.qq.com/images/lol/web201310/skin/big25002.jpg','https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'],
-				tabNav: ['素问', '灵枢', ],
-				conduct: [{
-						name: '黄帝内经',
-						url: './/pages/basics/Medical _Science/HuangDi'
-					}, {
-						name: "本草纲目",
-						url: ''
-					},
-					{
-						name: "",
-						url: ''
-					},
-					{
-						name: '',
-						url: ''
-					}, {
-						name: "",
-						url: ''
-					},
-				],
-				macroscopic: [{
-						name: '',
-						url: ''
-					},
-					{
-						name: '',
-						url: ''
-					}, {
-						name: "",
-						url: ''
-					}, {
-						name: "",
-						url: ''
-					}, {
-						name: "",
-						url: ''
-					},
-				],
+				tabNav: ['中', '西', ],
+
 
 			};
 		},
@@ -91,31 +58,6 @@
 	}
 </script>
 
-<style>
-	.books {
-		width: 28%;
-		height: 250rpx;
-		margin: 30rpx 2.5%;
-		padding: 0 20rpx;
-		background-color: antiquewhite;
-		text-align: center;
-		line-height: 250rpx;
-	}
-
-	.book {
-		margin-top: 50rpx;
-		display: flex;
-		/* 自动换行 */
-		flex-wrap: wrap;
-		/* border: 1px solid black; */
-	}
-
-	.cu-item {
-		width: 43%;
-		text-align: center;
-	}
-
-	page {
-		padding-top: 45rpx;
-	}
+<style scoped>
+	@import url("./../../static/Css/list.css");
 </style>

@@ -2,7 +2,6 @@
 	<view>
 		<scroll-view scroll-y class="page">
 			<view class="width">
-
 			</view>
 			<image src="https://img0.baidu.com/it/u=2976468595,984718161&fm=253&fmt=auto&app=138&f=JPEG?w=766&h=500"
 				mode="widthFix" class="response"></image>
@@ -19,81 +18,16 @@
 		</scroll-view>
 	</view>
 </template>
-
 <script>
+	import database from "@/static/Database/database.js"
 	export default {
 		name: "basics",
 		data() {
 			return {
-				elements: [{
-						title: '经济',
-						name: 'Economics',
-						color: 'cyan',
-						cuIcon: 'newsfill'
-					},
-					{
-						title: '心理学',
-						name: 'Psychology',
-						color: 'blue',
-						cuIcon: 'colorlens'
-					},
-					{
-						title: '医学',
-						name: 'MedicalScience',
-						color: 'green',
-						cuIcon: 'loading2'
-					},
-					{
-						title: '诗词',
-						name: 'Poetry',
-						color: 'orange',
-						cuIcon: 'icloading'
-					},
-					{
-						title: '宗教 ',
-						name: 'Religion',
-						color: 'mauve',
-						cuIcon: 'cuIcon'
-					},
-					{
-						title: '小说',
-						name: 'novel',
-						color: 'purple',
-						cuIcon: 'font'
-					},
-
-					// {
-					// 	title: '按钮',
-					// 	name: 'button',
-					// 	color: 'pink',
-					// 	cuIcon: 'btn'
-					// },
-					// {
-					// 	title: '标签',
-					// 	name: 'tag',
-					// 	color: 'brown',
-					// 	cuIcon: 'tagfill'
-					// },
-					// {
-					// 	title: '头像',
-					// 	name: 'avatar',
-					// 	color: 'red',
-					// 	cuIcon: 'myfill'
-					// },
-
-					// {
-					// 	title: '边框阴影',
-					// 	name: 'shadow',
-					// 	color: 'olive',
-					// 	cuIcon: 'copy'
-					// },
-
-				],
-			};
+				elements: database.elements,
+			}
 		},
-		onShow() {
-			console.log("success")
-		}
+		mounted() {}
 	}
 </script>
 

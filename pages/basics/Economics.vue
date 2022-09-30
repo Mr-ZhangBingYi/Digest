@@ -11,32 +11,32 @@
 			</view>
 		</scroll-view>
 		<block v-if="TabCur==0">
-			<!-- 理财 -->
+
 			<view class="book">
-				<view class="books" v-for="item in conduct" :key="item.conduct" >
-				           <navigator :url="item.url">
+				<view class="books" v-for="item in A_conduct" :key="item.A_conduct">
+					<navigator :url="item.url">
 						{{item.name}}
-				</navigator>
+					</navigator>
 				</view>
 			</view>
 		</block>
 		<block v-if="TabCur==1">
-			<!-- 宏观 -->
+
 			<view class="book">
-				<view class="books" v-for="item in macroscopic" :key="item.macroscopic" >
-				           <navigator :url="item.url">
+				<view class="books" v-for="item in A_macroscopic" :key="item.A_macroscopic">
+					<navigator :url="item.url">
 						{{item.name}}
-				</navigator>
+					</navigator>
 				</view>
 			</view>
 		</block>
 		<block v-if="TabCur==2">
-			<!-- 经典 -->
+
 			<view class="book">
-				<view class="books" v-for="item in classic" :key="item.classic" >
-				           <navigator :url="item.url">
+				<view class="books" v-for="item in A_classic" :key="item.A_classic">
+					<navigator :url="item.url">
 						{{item.name}}
-				</navigator>
+					</navigator>
 				</view>
 			</view>
 		</block>
@@ -44,57 +44,18 @@
 </template>
 
 <script>
+	import database from "@/static/Database/database.js"
 	export default {
 		data() {
 			return {
+				A_classic: database.A_classic,
+				A_conduct: database.A_conduct,
+				A_macroscopic: database.A_macroscopic,
 				CustomBar: this.CustomBar,
 				TabCur: 0,
 				// avatar:['https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg','https://ossweb-img.qq.com/images/lol/web201310/skin/big81005.jpg','https://ossweb-img.qq.com/images/lol/web201310/skin/big25002.jpg','https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'],
 				tabNav: ['理财', '宏观', '经典'],
-				conduct: [{
-					name: '价值',
-					url:'.//pages/basics/note/value'
-				},{
-					name: "穷爸爸富爸爸",
-					url: './/pages/basics/note/rich'
-				},
-				{
-					name: '',
-					url:''
-				},{
-					name: "",
-					url: ''
-				},],
-				macroscopic:[
-					{
-						name: '八次危机',
-						url:''
-					},
-					{
-						name: '告别百年激进',
-						url:''
-					},{
-						name: "",
-						url: ''
-					},
-				],
-				classic:[
-					{
-						name: '资本论',
-						url:''
-					},
-					{
-						name: '国富论',
-						url:''
-					},
-					{
-						name: '盐铁论',
-						url:''
-					},{
-						name: "",
-						url: ''
-					},
-				]
+
 			};
 		},
 		methods: {
@@ -106,30 +67,6 @@
 	}
 </script>
 
-<style>
-	.books {
-		width: 28%;
-		height: 250rpx;
-		margin: 30rpx 2.5%;
-		padding: 0 20rpx;
-		background-color: antiquewhite;
-		text-align: center;
-		line-height: 250rpx;
-	}
-	.book {
-		margin-top: 50rpx;
-		display: flex;
-		/* 自动换行 */
-		 flex-wrap: wrap; 
-		/* border: 1px solid black; */
-	}
-
-	.cu-item {
-		width: 30%;
-		text-align: center;
-	}
-
-	page {
-		padding-top: 45rpx;
-	}
+<style scoped>
+	@import url("./../../static/Css/list.css");
 </style>
