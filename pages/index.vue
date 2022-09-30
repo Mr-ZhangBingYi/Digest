@@ -5,10 +5,11 @@
 
 		<view class="index">
 			<view class="index_one">
-				非博学无以广才，非志无以成学。
+				我只知道一件事，那就是我一无所知！
 			</view>
 			<view class="index_two">
-				一 一 &nbsp; &nbsp;&lt; &lt; 东汉·诫子书 &gt; &gt;
+				一 一 苏格拉底
+				<!-- &nbsp; &nbsp;&lt; &lt; 东汉·诫子书 &gt; &gt; -->
 			</view>
 
 			<view class="Tips" v-show="Tips">
