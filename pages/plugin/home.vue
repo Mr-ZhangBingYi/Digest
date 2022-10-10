@@ -18,11 +18,11 @@
 				<image src="../../static/listicon.svg" mode="" class="aaa"></image>
 			</view>
 			<view class="A_list" v-if="show">
-				<ul>
+				<ol>
 					<li v-for="(a,b) in Booklist_A" :key="b">{{a.a}}</li>
 
 
-				</ul>
+				</ol>
 			</view>
 			<!-- 未读 -->
 			<view class="Unread cc" @click="b">
@@ -34,10 +34,10 @@
 
 			</view>
 			<view class="B_list" v-if="shwo">
-				<ul>
+				<ol>
 					<li v-for="(a,b) in Booklist_B" :key="b">{{a.a}}</li>
 
-				</ul>
+				</ol>
 			</view>
 			<!-- 语句 -->
 			<view class="Unread cc" @click="c">
@@ -185,7 +185,7 @@
 		background-color: #fff;
 		border: 1px solid black;
 		margin-top: 20rpx;
-		width: 90%;
+		width: 87%;
 		padding: 10rpx;
 		border-radius: 10rpx;
 		height: 100rpx;
@@ -194,9 +194,9 @@
 	}
 
 	.list {
-		margin-left: 39rpx;
+		padding-left: 39rpx;
 		overflow-y: auto;
-
+		height: 950rpx;
 
 
 	}
