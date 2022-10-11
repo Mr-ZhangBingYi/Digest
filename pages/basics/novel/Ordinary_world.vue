@@ -8,13 +8,18 @@
 			<!-- 双循环，二层循环是从一层循环里面拿值做循环 -->
 			<view class="">
 				<ul>
-					<li v-for="(a,b) in regiment" :key="a.chapter">{{a.chapter}}
+					<li v-for="(a,b) in emperor" :key="b">{{a.chapter}}
+						<br />
+
+
 						<ol>
 
-							<li v-for="(e,f) in a. text" :key="e. text">{{e. words}}</li>
+							<li v-for="(e,f) in a. text" :key="f">{{e. words}}</li>
 						</ol>
+						<p>{{a.time}}</p>
 					</li>
 
+					</li>
 				</ul>
 			</view>
 		</view>
@@ -26,7 +31,7 @@
 	export default {
 		data() {
 			return {
-				regiment: database.ordinary
+				emperor: database.ordinary,
 
 			};
 		}
@@ -34,27 +39,5 @@
 </script>
 
 <style scoped>
-	.Digest {
-		background-color: bisque;
-		margin: 0;
-		padding: 0;
-		top: 85rpx;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		position: fixed;
-		/* 滚动条 */
-		overflow-y: scroll;
-	}
-
-	ol>li {
-
-		margin: 20rpx 0rpx;
-		margin-left: -80rpx;
-		padding: 0 30rpx 0 30rpx;
-	}
-
-	ul>li {
-		margin-top: 35rpx;
-	}
+	@import url("../../../static/Css/abstract.css");
 </style>
