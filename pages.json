@@ -120,8 +120,14 @@
 			"path": "pages/basics/poetry/QingpingTune",
 			"style": {}
 		},
+		// 文学小说 团长
 		{
 			"path": "pages/basics/novel/RegimentalCommander",
+			"style": {}
+		},
+		// 平凡的世界
+		{
+			"path": "pages/basics/novel/Ordinary_world",
 			"style": {}
 		},
 		// 医药 黄帝内经
