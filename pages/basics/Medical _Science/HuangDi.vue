@@ -10,10 +10,7 @@
 				<ul>
 					<li v-for="(a,b) in emperor" :key="b">{{a.chapter}}
 						<br />
-
-
 						<ol>
-
 							<li v-for="(e,f) in a. text" :key="f">{{e. words}}</li>
 						</ol>
 						<p>{{a.time}}</p>
@@ -32,7 +29,6 @@
 		data() {
 			return {
 				emperor: database.emperor,
-
 			};
 		}
 	}
