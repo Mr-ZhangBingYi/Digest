@@ -3,8 +3,7 @@
 		<scroll-view scroll-y class="page">
 			<view class="width">
 			</view>
-			<image src="https://img0.baidu.com/it/u=2976468595,984718161&fm=253&fmt=auto&app=138&f=JPEG?w=766&h=500"
-				mode="widthFix" class="response"></image>
+			<image src="../../static/pulic/Statue_of_Liberty.jpg" mode="widthFix" class="response"></image>
 			<view class="nav-list">
 				<navigator hover-class="none" :url="'/pages/basics/' + item.name" class="nav-li" navigateTo
 					:class="'bg-'+item.color" :style="[{animation: 'show ' + ((index+1)*0.2+1) + 's 1'}]"
@@ -32,9 +31,8 @@
 </script>
 
 <style>
-	.width {
-		width: 100%;
-		height: 1%;
+	.response {
+		margin-bottom: 20rpx;
 	}
 
 	.page {
